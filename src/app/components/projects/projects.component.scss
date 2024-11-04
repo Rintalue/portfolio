@@ -1,0 +1,90 @@
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  
+  &.visible {
+    opacity: 1; // Fade in container when visible
+  }
+
+  .project-card {
+    background: beige;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    border: 1px solid #b3b327;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.8s ease-out;
+  
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    h3 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    p {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      
+      &:hover {
+        background-color: #218838;
+      }
+    }
+  }
+  
+  /* Staggered fade-in for each project card */
+  &.visible .project-card:nth-child(1) { 
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.2s; 
+  }
+  &.visible .project-card:nth-child(2) { 
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.4s; 
+  }
+  &.visible .project-card:nth-child(3) { 
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.6s; 
+  }
+  &.visible .project-card:nth-child(4) { 
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 0.8s; 
+  }
+  &.visible .project-card:nth-child(5) { 
+    opacity: 1; 
+    transform: translateY(0); 
+    transition-delay: 1s; 
+  }
+}

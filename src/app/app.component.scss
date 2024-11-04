@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skill {
+    width: 100px;
+    text-align: center;
+  }
+footer {
+  background-color: #222; 
+  color: white; 
+  text-align: center; 
+  padding: 20px; 
+  position: relative; 
+  margin-top: 40px; 
+}
+
+footer p {
+  margin: 0; 
+  font-size: 14px; 
+  line-height: 1.6;
+}
+
+footer a {
+  color: #61dafb; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+footer a:hover {
+  color: #21a1f1; 
+}
+
+footer::before {
+  content: ''; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  height: 5px; 
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 15px; 
+  }
+
+  footer p {
+    font-size: 12px; 
+  }
+}
