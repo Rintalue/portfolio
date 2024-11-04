@@ -9,6 +9,7 @@ import { ContactComponent } from "./components/contact/contact.component";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,8 @@ import { CommonModule } from '@angular/common';
     ContactComponent,
     MatFormFieldModule, 
     MatInputModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
