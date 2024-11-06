@@ -18,7 +18,7 @@ import { MatInputModule } from '@angular/material/input';
     if (contactForm.valid) {
       const formData = contactForm.value;
 
-      this.http.post('http://localhost:3000/send-email', formData) // Use the URL of your backend
+      this.http.post('http://localhost:3000/send-email', formData)
         .subscribe(
           response => {
             console.log('Email sent successfully!', response);
