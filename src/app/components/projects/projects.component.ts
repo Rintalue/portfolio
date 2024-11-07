@@ -1,11 +1,10 @@
-// src/app/components/projects/projects.component.ts
 import { Component, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { Platform } from '@angular/cdk/platform'; 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule], // Remove ElementRef and AfterViewInit from imports
+  imports: [CommonModule],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
@@ -63,24 +62,26 @@ export class ProjectsComponent implements AfterViewInit {
     }
   }
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef, private platform: Platform) {}
 
   ngAfterViewInit(): void {
-    const options = {
-      threshold: 0.5
-    };
+    if (this.platform.isBrowser) {
+      const options = {
+        threshold: 0.5
+      };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible'); 
-          observer.unobserve(entry.target); 
-        }
-      });
-    }, options);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
 
-    const projectContainer = this.el.nativeElement.querySelector('.projects-container');
-    if (projectContainer) observer.observe(projectContainer);
+      const projectContainer = this.el.nativeElement.querySelector('.projects-container');
+      if (projectContainer) observer.observe(projectContainer);
+    }
   }
 }
 

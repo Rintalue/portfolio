@@ -10,7 +10,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -24,6 +23,7 @@ import { CommonModule } from '@angular/common';
     MatFormFieldModule, 
     MatInputModule,
     CommonModule,
+
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

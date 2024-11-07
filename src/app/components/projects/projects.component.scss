@@ -6,12 +6,11 @@
   transition: opacity 0.8s ease-in-out;
   
   &.visible {
-    opacity: 1; // Fade in container when visible
+    opacity: 1; 
   }
 
   .project-card {
     background: beige;
-    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
     margin: 10px;
@@ -61,7 +60,7 @@
     }
   }
   
-  /* Staggered fade-in for each project card */
+
   &.visible .project-card:nth-child(1) { 
     opacity: 1; 
     transform: translateY(0); 
